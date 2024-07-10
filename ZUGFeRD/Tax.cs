@@ -33,13 +33,7 @@ namespace s2industries.ZUGFeRD
         /// 
         /// This information is calculated live.
         /// </summary>
-        public decimal TaxAmount
-        {
-            get
-            {
-                return System.Math.Round(0.01m * this.Percent * this.BasisAmount, 2, MidpointRounding.AwayFromZero);
-            }
-        }
+        public decimal TaxAmount { get; set; }
 
         /// <summary>
         /// VAT category taxable amount
