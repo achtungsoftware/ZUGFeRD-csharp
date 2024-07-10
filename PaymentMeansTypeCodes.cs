@@ -134,6 +134,25 @@ namespace s2industries.ZUGFeRD
             return PaymentMeansTypeCodes.Unknown;
         } // !FromString()
 
+        // Gibt an, welche vom belegFuchs System unterstützt werden
+        public static bool Allowed(this PaymentMeansTypeCodes _, string s)
+        {
+            switch (s)
+            {
+                case "1": return true;
+                case "10": return true;
+                case "20": return true;
+                case "30": return true;
+                case "31": return true;
+                case "48": return true;
+                case "49": return true;
+                case "58": return true;
+                case "59": return true;
+                case "97": return true;
+            }
+            return false;
+        }
+
 
         public static string EnumToString(this PaymentMeansTypeCodes c)
         {
